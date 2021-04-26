@@ -1,0 +1,29 @@
+total_cost = 0
+sandwich_type = input("What sandwich do you want? \n Type c for Chicken ($5.25) \n Type b for Beef ($6.25) \n Type t for Tofu ($5.75) \n")
+if sandwich_type == "c":
+    total_cost = total_cost + 5.25
+    print("You have selected a Chicken Sandwich. Added to your order.")
+elif sandwich_type == "b":
+    total_cost = total_cost + 6.25
+    print("You have selected a Beef Sandwich. Added to your order.")
+elif sandwich_type == "t":
+    total_cost = total_cost + 5.75
+    print("You have selected a Tofu Sandwich. Added to your order.")
+else:
+    print("You have not selected anything. Please try again.")
+    sandwhich_type = input("What sandwich do you want? \n Type c for Chicken ($5.25) \n Type b for Beef ($6.25) \n Type t for Tofu ($5.75) \n")
+beverage = input("would you like a beverage? Type yes or no. \n")
+if beverage == ("yes"):
+    size = input("what size do you want? \n s for small $1 \n m for medium $1.75 \n l for large $2.25 \n")
+    if size == ("s"):
+        print("You have selected a small drink.")
+        total_cost = total_cost + 1
+    elif size == ("m"):
+        print("You have selected a medium drink.")
+        total_cost = total_cost + 1.75
+    else:
+        print("You have selected a large drink.")
+        total_cost = total_cost + 2.25
+else:
+    print("You have not ordered a beverage.")
+print ("Your order costs " + str(total_cost) + " dollars.")
